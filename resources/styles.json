@@ -1,0 +1,36 @@
+{
+    "pages": {
+        "notfound": [
+            "src/scss/notfound.scss"
+        ],
+        "home": [
+            "src/scss/home.scss"
+        ],
+        "about": [
+            "src/scss/about.scss"
+        ],
+        "services": [
+            "src/scss/services.scss"
+        ],
+        "careers": [
+            "src/scss/careers.scss"
+        ],
+        "contact": [
+            "src/scss/contact.scss"
+        ]
+    },
+    "components": {
+        "bootstrap": "src/scss/plugins/bootstrap-4.5.2/bootstrap.user-optimized.css",
+        "bootstrap-main": "src/scss/plugins/bootstrap-4.5.2/bootstrap.min.css",
+        "icons": "src/scss/plugins/font-awesome-5.14.0/all.css",
+        "datatable": "src/scss/plugins/datatables.min.css",
+        "global": "src/scss/global.scss",
+        "animations": "src/scss/animations.scss",
+        "custom_icons": "src/scss/components/custom_icons.scss",
+        "buttons": "src/scss/components/buttons.scss",
+        "navigation_bar": "src/scss/components/navigation_bar.scss",
+        "footer": "src/scss/components/footer.scss",
+        "owl_carousel": "src/scss/plugins/owl-carousel-2.3.4/owl.carousel.min.css",
+        "typehead": "src/scss/plugins/jquery.typeahead.min.css"
+    }
+}

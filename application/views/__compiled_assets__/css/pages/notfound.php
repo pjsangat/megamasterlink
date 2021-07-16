@@ -1,0 +1,1 @@
+<style>.fa-play:before{content:"\f04b"}</style>

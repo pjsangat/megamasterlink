@@ -1,0 +1,7 @@
+{
+    "name": "depedtv/composer-setup",
+    "description": "Composer setup for depedtv.",
+    "require": {
+        "vlucas/phpdotenv": "^4.1"
+    }
+}

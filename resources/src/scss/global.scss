@@ -1,0 +1,80 @@
+@import 'mixin.scss';
+@media print{@page {size: landscape}}
+
+* {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+:after, :before {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  
+  margin: 0;
+  font-size: 14px;
+  font-family: '', sans-serif;
+  line-height: 1.5;
+
+  &.no_flow{
+    overflow: hidden;
+  }
+
+}
+.content-wrapper{
+  background: url('/resources/img/bg.png') center top no-repeat;
+  background-size: 120%;
+  @include screen-mobile {
+    background-size: 200%;
+  }
+}
+.content{
+  width: 1300px;
+  padding: 0 15px;
+  margin: auto;
+  @media (max-width: 1300px){
+    width: 100%;
+  }
+  @include screen-mobile {
+    width: 100%;
+  }
+}
+
+.primary-color-text{
+  color: rgb(225, 136, 0);
+}
+
+.secondary-color-text{
+  color: #3c3c3c;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+label.error{
+  color: red !important;
+}
+.navbar-toggler:focus, .navbar-toggler:hover{
+  outline: unset !important;
+}
