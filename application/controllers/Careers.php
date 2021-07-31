@@ -6,6 +6,9 @@ class Careers extends CI_Controller
 {
     public function index(){
 
+        $this->load->model('Careers_model', 'careers');
+
+        $data['careers'] = $this->careers->getBy(['status'=> 1]);
         // PAGE HEAD PROCESSING
         $this->load->view('components/header', array(
             'title' => 'Careers',
@@ -31,7 +34,7 @@ class Careers extends CI_Controller
 
         // PAGE CONTENT PROCESSING
         $this->load->view('components/navigation_bar');
-        $this->load->view('pages/careers');
+        $this->load->view('pages/careers', $data);
         $this->load->view('components/footer');
         
         $this->load->view('components/scripts_render', array(
