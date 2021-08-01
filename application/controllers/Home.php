@@ -90,7 +90,7 @@ class Home extends CI_Controller
                     }else{
                         $config['protocol'] = "smtp";
                         $config['smtp_host'] = "fmt07.web.com.ph";
-                        $config['smtp_port'] = "465";
+                        $config['smtp_port'] = "587";
                         $config['smtp_user'] = "do-not-reply-megamaster@megamasterlink.com.ph";
                         $config['smtp_pass'] = "do-not-reply-megamaster";
 
