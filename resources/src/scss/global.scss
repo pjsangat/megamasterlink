@@ -78,3 +78,12 @@ label.error{
 .navbar-toggler:focus, .navbar-toggler:hover{
   outline: unset !important;
 }
+
+.message.success{
+  color: green;
+  font-weight: bold;
+}
+
+.message.error{
+  color: red;
+}

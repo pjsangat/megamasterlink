@@ -12,9 +12,10 @@
     </div>
     <div class="form">
         <div id="requestForm" class="ui form">
+            <div class="message"></div>
+
             <form action="" id="requestQuotation">
                 <div class="header">Request for Quotation</div>
-                <div class="message"></div>
                 <div class="field">
                     <label class="required" for="Name">Your Name</label>
                     <input id="Name" name="Name" type="text" value="">

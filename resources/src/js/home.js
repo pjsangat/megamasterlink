@@ -48,9 +48,9 @@ $(document).ready(function(){
                     var html = '';
                     html += '<p>'+response.message+'</p>';
                     if(response.success == 0){
-                        $("#requestQuotation").find(".message").removeClass('error');
-                        $("#requestQuotation").find(".message").removeClass('success');
-                        $("#requestQuotation").find(".message").addClass('error');
+                        $("#requestForm").find(".message").removeClass('error');
+                        $("#requestForm").find(".message").removeClass('success');
+                        $("#requestForm").find(".message").addClass('error');
                         if(response.error.length > 0){
                             html += '<ul>';
                             for(var ctr = 0; ctr < response.error.length; ctr++){
@@ -59,11 +59,13 @@ $(document).ready(function(){
                             html += '</ul>';
                         }
                     }else{
-                        $("#requestQuotation").find(".message").removeClass('error');
-                        $("#requestQuotation").find(".message").removeClass('success');
-                        $("#requestQuotation").find(".message").addClass('success');
+                        $("#requestForm").find(".message").removeClass('error');
+                        $("#requestForm").find(".message").removeClass('success');
+                        $("#requestForm").find(".message").addClass('success');
+                        $("#requestQuotation").remove();
+                        $("#btnSendRequest").remove();
                     }
-                    $("#requestQuotation").find(".message").html(html);
+                    $("#requestForm").find(".message").html(html);
                 });
                 console.info(params);
             } else {
