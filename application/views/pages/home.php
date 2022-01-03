@@ -23,6 +23,14 @@
         </div>
     </div>
 
+
+    <div class="video">
+        <video autoplay muted controls>
+            <source src="<?php echo DOF_IMG_URL . 'for-website.mp4'; ?>" type="video/mp4">
+            <source src="<?php echo DOF_IMG_URL . 'for-website.ogg'; ?>" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <div class="commitments">
         <div class="item">
             <div class="header"><span class="icon-bookmark-plus"></span>Integrity</div>
