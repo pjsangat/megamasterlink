@@ -66,9 +66,9 @@
                             <div class="field">
                                 <textarea cols="20" id="Message" name="Message" placeholder="Your Message*" rows="8"></textarea>
                             </div>
-                            <div class="field">
+                            <!-- <div class="field">
                                 <div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('google_key') ?>"></div> 
-                            </div>
+                            </div> -->
                             <div><font style="color:red;">*</font> indicates required field</div>
                         </form>
                         <button id="btnSendRequest" type="button" class="submit">SEND</button>
