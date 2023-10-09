@@ -100,7 +100,7 @@ class Home extends CI_Controller
                         $this->load->library('email', $config);
                         $this->email->set_newline("\r\n");
                         $this->email->from($this->input->post('Email'), $this->input->post('Name'));
-                        $this->email->to('sales@megamasterlink.com ph');
+                        $this->email->to('sales@megamasterlink.com.ph');
                         $this->email->bcc('rab@megamasterlink.com.ph');
                         // $this->email->bcc('pjsanga@gmail.com');
                         $this->email->subject($this->input->post('Subject'));
