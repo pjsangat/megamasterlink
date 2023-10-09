@@ -36,9 +36,9 @@
                     <label class="required" for="Message">Your Message</label>
                     <textarea cols="20" id="Message" name="Message" rows="8"></textarea>
                 </div>
-                <div class="field">
+                <!-- <div class="field">
                     <div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('google_key') ?>"></div> 
-                </div>
+                </div> -->
                 <input id="MessageType" name="MessageType" type="hidden" value="Quotation">
                 <div><font style="color:red;">*</font> indicates required field</div>
             </form>

@@ -40,8 +40,8 @@ $(document).ready(function(){
             },
         },
         submitHandler: function(form) {
-            if (grecaptcha.getResponse()) {
-                console.info(form);
+            // if (grecaptcha.getResponse()) {
+            //     console.info(form);
                 var params =  { url: GLOBAL_DOF_BASE_URL + 'home/request_quotation', type: 'POST', data: $(form).serialize() };
                 console.info(params);
                 ajaxRequest(params, function(params, response){
@@ -68,9 +68,9 @@ $(document).ready(function(){
                     $("#requestForm").find(".message").html(html);
                 });
                 console.info(params);
-            } else {
-                alert('Please confirm captcha to proceed')
-            }
+            // } else {
+            //     alert('Please confirm captcha to proceed')
+            // }
         }
 
     });

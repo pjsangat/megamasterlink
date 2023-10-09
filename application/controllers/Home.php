@@ -66,14 +66,14 @@ class Home extends CI_Controller
             if($this->input->post()){
                 $error = [];
 
-                $recaptchaResponse = trim($this->input->post('g-recaptcha-response'));
-                $userIp=$this->input->ip_address();
+                // $recaptchaResponse = trim($this->input->post('g-recaptcha-response'));
+                // $userIp=$this->input->ip_address();
      
-                $secret = $this->config->item('google_secret');
-                $url="https://www.google.com/recaptcha/api/siteverify?secret=".$secret."&response=".$recaptchaResponse."&remoteip=".$userIp;
+                // $secret = $this->config->item('google_secret');
+                // $url="https://www.google.com/recaptcha/api/siteverify?secret=".$secret."&response=".$recaptchaResponse."&remoteip=".$userIp;
 
-                $captchaResponse = curl_data($url);
-                if ($captchaResponse['success']) {
+                // $captchaResponse = curl_data($url);
+                // if ($captchaResponse['success']) {
                     $this->load->library('form_validation');
 
                     $this->form_validation->set_rules('Name', 'Name', 'required');
@@ -92,7 +92,7 @@ class Home extends CI_Controller
                         $config['smtp_host'] = "fmt07.web.com.ph";
                         $config['smtp_port'] = "587";
                         $config['smtp_user'] = "do-not-reply-megamaster@megamasterlink.com.ph";
-                        $config['smtp_pass'] = "do-not-reply-megamaster";
+                        $config['smtp_pass'] = "UUaqS}Ny-L5d";
 
                         $message = $this->input->post('Message');
                         $config['mailtype'] = "html";
@@ -100,8 +100,9 @@ class Home extends CI_Controller
                         $this->load->library('email', $config);
                         $this->email->set_newline("\r\n");
                         $this->email->from($this->input->post('Email'), $this->input->post('Name'));
-                        $this->email->to('rab@megamasterlink.com.ph');
-                        $this->email->bcc('pjsanga@gmail.com');
+                        // $this->email->to('rab@megamasterlink.com.ph');
+                        $this->email->to('pjsanga@gmail.com');
+                        // $this->email->bcc('pjsanga@gmail.com');
                         $this->email->subject($this->input->post('Subject'));
                         $this->email->message($message);
 
@@ -114,9 +115,9 @@ class Home extends CI_Controller
                         }
 
                     }
-                }else{
-                    $error[] = 'Invalid Captcha';
-                }
+                // }else{
+                //     $error[] = 'Invalid Captcha';
+                // }
 
 
                 if(!empty($error)){
