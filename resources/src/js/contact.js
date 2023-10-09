@@ -20,7 +20,7 @@ $(document).ready(function(){
             },
         },
         submitHandler: function(form) {
-            if (grecaptcha.getResponse()) {
+            // if (grecaptcha.getResponse()) {
                 console.info(form);
                 var params =  { url: GLOBAL_DOF_BASE_URL + 'home/request_quotation', type: 'POST', data: $(form).serialize() };
                 console.info(params);
@@ -46,9 +46,9 @@ $(document).ready(function(){
                     $("#requestQuotation").find(".message").html(html);
                 });
                 console.info(params);
-            } else {
-                alert('Please confirm captcha to proceed')
-            }
+            // } else {
+            //     alert('Please confirm captcha to proceed')
+            // }
         }
 
     });
